@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sitio — Agence Digitale</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div id="cursor-dot"></div>
+
+<!-- ═══ NAVBAR ═══════════════════════════════════════ -->
+<nav id="navbar">
+  <div class="container nav-inner">
+    <a class="logo" href="#" onclick="showPage('home')">Sit<span>io</span></a>
+    <div class="nav-links">
+      <a href="#" onclick="showPage('home')"   data-page="home"      class="active">Accueil</a>
+      <a href="#" onclick="showPage('services')" data-page="services">Services</a>
+      <a href="#" onclick="showPage('portfolio')" data-page="portfolio">Portfolio</a>
+      <a href="#" onclick="showPage('about')"   data-page="about">À propos</a>
+      <a href="#" onclick="showPage('contact')" data-page="contact">Contact</a>
+    </div>
+    <a href="#" class="btn btn-primary nav-cta" onclick="showPage('contact')">Démarrer un projet</a>
+    <div class="burger" id="burger" onclick="toggleMobile()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#" onclick="showPage('home');toggleMobile()">Accueil</a>
+  <a href="#" onclick="showPage('services');toggleMobile()">Services</a>
+  <a href="#" onclick="showPage('portfolio');toggleMobile()">Portfolio</a>
+  <a href="#" onclick="showPage('about');toggleMobile()">À propos</a>
+  <a href="#" onclick="showPage('contact');toggleMobile()">Contact</a>
+  <a href="#" class="btn btn-primary" style="text-align:center" onclick="showPage('contact');toggleMobile()">Démarrer un projet</a>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     PAGE 1 — ACCUEIL
+═══════════════════════════════════════════════════ -->
+<div id="page-home" class="page active">
+
+  <section id="home">
+    <div class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-grid"></div>
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <div class="hero-eyebrow">Agence digitale à votre service</div>
+            <h1 class="hero-title">
+              <span class="line">Nous créons des</span>
+              <span class="line accent">expériences web</span>
+              <span class="line">qui convertissent.</span>
+            </h1>
+            <p class="hero-desc">
+              Sitio conçoit et développe des sites web sur mesure, performants et élégants — 
+              pour des marques ambitieuses qui veulent se démarquer.
+            </p>
+            <div class="hero-actions">
+              <a href="#" class="btn btn-primary" onclick="showPage('portfolio')">Voir nos projets →</a>
+              <a href="#" class="btn btn-outline" onclick="showPage('contact')">Nous contacter</a>
+            </div>
+            <div class="hero-stats">
+              <div>
+                <div class="stat-num">120<span>+</span></div>
+                <div class="stat-label">Projets livrés</div>
+              </div>
+              <div>
+                <div class="stat-num">98<span>%</span></div>
+                <div class="stat-label">Clients satisfaits</div>
+              </div>
+              <div>
+                <div class="stat-num">8<span>ans</span></div>
+                <div class="stat-label">D'expérience</div>
+              </div>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="mockup-card">
+              <div class="mockup-bar">
+                <div class="mockup-dot red"></div>
+                <div class="mockup-dot yellow"></div>
+                <div class="mockup-dot green"></div>
+                <div class="mockup-url">sitio-agency.com</div>
+              </div>
+              <div class="mockup-body">
+                <div class="mockup-nav-row">
+                  <div class="mkn"></div><div class="mkn"></div>
+                  <div class="mkn"></div><div class="mkn"></div>
+                </div>
+                <div class="mockup-hero-block">
+                  <div class="mkh-label"></div>
+                  <div class="mkh-title"></div>
+                  <div class="mkh-title sm"></div>
+                  <div class="mkh-sub"></div>
+                  <div class="mkh-btn"></div>
+                </div>
+                <div style="height:1rem"></div>
+                <div class="mockup-cards-row">
+                  <div class="mk-mini-card">
+                    <div class="mk-icon"></div>
+                    <div class="mk-line"></div>
+                    <div class="mk-line sm"></div>
+                  </div>
+                  <div class="mk-mini-card">
+                    <div class="mk-icon"></div>
+                    <div class="mk-line"></div>
+                    <div class="mk-line sm"></div>
+                  </div>
+                  <div class="mk-mini-card">
+                    <div class="mk-icon"></div>
+                    <div class="mk-line"></div>
+                    <div class="mk-line sm"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="floating-badge">
+              <div class="badge-icon">⚡</div>
+              <div>
+                <div class="badge-text">Performance 99</div>
+                <div class="badge-sub">Score Lighthouse</div>
+              </div>
+            </div>
+            <div class="floating-badge2">
+              <span class="fb2-icon">✅</span>
+              <span class="fb2-text">Projet livré</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Clients -->
+    <div class="clients-band">
+      <div class="container">
+        <p class="clients-label">Ils nous font confiance</p>
+        <div class="clients-logos">
+          <span class="client-logo">Novalia</span>
+          <span class="client-logo">Starkline</span>
+          <span class="client-logo">Bluewave</span>
+          <span class="client-logo">Vertex</span>
+          <span class="client-logo">Nomitek</span>
+          <span class="client-logo">Arcane</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Services overview -->
+    <div class="services-overview">
+      <div class="container">
+        <div class="section-header">
+          <span class="tag">Ce que nous faisons</span>
+          <h2 class="section-title">Des solutions digitales<br>complètes</h2>
+          <div class="divider"></div>
+          <p class="section-sub">De la stratégie à la mise en ligne, nous couvrons tous les aspects de votre présence web avec expertise et créativité.</p>
+        </div>
+        <div class="services-grid">
+          <div class="svc-card reveal">
+            <div class="svc-icon">🎨</div>
+            <div class="svc-name">Design UI/UX</div>
+            <p class="svc-desc">Interfaces intuitives, ergonomiques et mémorables. Chaque pixel est pensé pour l'utilisateur.</p>
+          </div>
+          <div class="svc-card reveal">
+            <div class="svc-icon">⚙️</div>
+            <div class="svc-name">Développement Web</div>
+            <p class="svc-desc">Code propre, performant et maintenable. Technologies modernes adaptées à votre projet.</p>
+          </div>
+          <div class="svc-card reveal">
+            <div class="svc-icon">📱</div>
+            <div class="svc-name">Applications Mobile</div>
+            <p class="svc-desc">Applications iOS et Android natives ou hybrides, pensées pour une expérience fluide.</p>
+          </div>
+          <div class="svc-card reveal">
+            <div class="svc-icon">🔍</div>
+            <div class="svc-name">SEO & Performance</div>
+            <p class="svc-desc">Optimisation pour les moteurs de recherche et vitesse de chargement maximale.</p>
+          </div>
+          <div class="svc-card reveal">
+            <div class="svc-icon">🛒</div>
+            <div class="svc-name">E-commerce</div>
+            <p class="svc-desc">Boutiques en ligne complètes avec gestion de stock, paiement sécurisé et analytics.</p>
+          </div>
+          <div class="svc-card reveal">
+            <div class="svc-icon">📊</div>
+            <div class="svc-name">Stratégie Digitale</div>
+            <p class="svc-desc">Audit, conseil et accompagnement pour maximiser l'impact de votre présence numérique.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-strip">
+      <div class="container">
+        <h2>Prêt à lancer votre projet ?</h2>
+        <p>Discutons de vos besoins — le premier échange est gratuit et sans engagement.</p>
+        <a href="#" class="btn-white" onclick="showPage('contact')">Prendre rendez-vous →</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="logo">Sit<span>io</span></span>
+          <p class="footer-tagline">Agence digitale créative spécialisée dans la conception et le développement de solutions web sur mesure.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#" onclick="showPage('home')">Accueil</a></li>
+            <li><a href="#" onclick="showPage('services')">Services</a></li>
+            <li><a href="#" onclick="showPage('portfolio')">Portfolio</a></li>
+            <li><a href="#" onclick="showPage('about')">À propos</a></li>
+            <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#">Design UI/UX</a></li>
+            <li><a href="#">Développement Web</a></li>
+            <li><a href="#">E-commerce</a></li>
+            <li><a href="#">Applications Mobile</a></li>
+            <li><a href="#">SEO & Performance</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="#">contact@sitio.agency</a></li>
+            <li><a href="#">+212 6 00 00 00 00</a></li>
+            <li><a href="#">Marrakech, Maroc</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Sitio Agency. Tous droits réservés.</span>
+        <span>Conçu avec ❤️ par Sitio</span>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     PAGE 2 — SERVICES
+═══════════════════════════════════════════════════ -->
+<div id="page-services" class="page">
+
+  <section id="services">
+    <div class="page-hero">
+      <div class="container">
+        <div class="page-hero-inner">
+          <span class="tag">Nos expertises</span>
+          <h1 class="section-title">Des services pensés<br>pour votre succès</h1>
+          <div class="divider"></div>
+          <p class="section-sub">Chaque projet est unique. Nous adaptons nos compétences à vos objectifs pour livrer des solutions qui font la différence.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="services-detail">
+      <div class="container">
+
+        <div class="sd-item reveal">
+          <div>
+            <div class="sd-num">01 — Design</div>
+            <h2 class="sd-title">Design UI/UX centré sur l'utilisateur</h2>
+            <p class="sd-desc">Nous créons des interfaces qui captivent et convertissent. Notre approche combine recherche utilisateur, prototypage rapide et tests d'usabilité pour garantir une expérience irréprochable.</p>
+            <div class="sd-features">
+              <div class="sd-feat">Audit UX et analyse des parcours utilisateur</div>
+              <div class="sd-feat">Wireframing et prototypage interactif</div>
+              <div class="sd-feat">Design system cohérent et scalable</div>
+              <div class="sd-feat">Tests utilisateurs et itérations</div>
+            </div>
+          </div>
+          <div class="sd-visual">
+            <div style="font-size:4rem;position:relative;z-index:1">🎨</div>
+            <div class="sd-visual-label">UI / UX Design</div>
+          </div>
+        </div>
+
+        <div class="sd-item reverse reveal">
+          <div>
+            <div class="sd-num">02 — Développement</div>
+            <h2 class="sd-title">Développement Web haute performance</h2>
+            <p class="sd-desc">Nous développons des sites et applications web avec les technologies les plus modernes : React, Next.js, Vue.js, et bien d'autres. Code propre, documenté et optimisé pour les performances.</p>
+            <div class="sd-features">
+              <div class="sd-feat">Sites vitrine et landing pages</div>
+              <div class="sd-feat">Applications web complexes (SPA, PWA)</div>
+              <div class="sd-feat">Intégrations API et systèmes tiers</div>
+              <div class="sd-feat">Optimisation Core Web Vitals</div>
+            </div>
+          </div>
+          <div class="sd-visual">
+            <div style="font-size:4rem;position:relative;z-index:1">⚙️</div>
+            <div class="sd-visual-label">Web Development</div>
+          </div>
+        </div>
+
+        <div class="sd-item reveal">
+          <div>
+            <div class="sd-num">03 — E-commerce</div>
+            <h2 class="sd-title">Boutiques en ligne qui vendent</h2>
+            <p class="sd-desc">Votre boutique en ligne mérite plus qu'un template générique. Nous créons des expériences d'achat fluides et rassurantes qui maximisent les conversions et fidélisent vos clients.</p>
+            <div class="sd-features">
+              <div class="sd-feat">Shopify, WooCommerce, solutions sur mesure</div>
+              <div class="sd-feat">Paiement sécurisé multi-devises</div>
+              <div class="sd-feat">Gestion des stocks et logistique</div>
+              <div class="sd-feat">Analytics et tableau de bord</div>
+            </div>
+          </div>
+          <div class="sd-visual">
+            <div style="font-size:4rem;position:relative;z-index:1">🛒</div>
+            <div class="sd-visual-label">E-Commerce</div>
+          </div>
+        </div>
+
+        <div class="sd-item reverse reveal">
+          <div>
+            <div class="sd-num">04 — SEO & Growth</div>
+            <h2 class="sd-title">Visibilité et croissance organique</h2>
+            <p class="sd-desc">Être beau ne suffit pas — il faut être trouvé. Notre équipe SEO optimise votre présence pour que vos clients idéaux vous trouvent avant la concurrence.</p>
+            <div class="sd-features">
+              <div class="sd-feat">Audit SEO technique complet</div>
+              <div class="sd-feat">Stratégie de contenu et mots-clés</div>
+              <div class="sd-feat">Link building et autorité de domaine</div>
+              <div class="sd-feat">Reporting mensuel et KPIs</div>
+            </div>
+          </div>
+          <div class="sd-visual">
+            <div style="font-size:4rem;position:relative;z-index:1">🔍</div>
+            <div class="sd-visual-label">SEO & Growth</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="process-section">
+      <div class="container">
+        <span class="tag">Notre méthode</span>
+        <h2 class="section-title">Comment nous travaillons</h2>
+        <div class="process-steps">
+          <div class="proc-step">
+            <div class="proc-num">01</div>
+            <div class="proc-title">Découverte</div>
+            <p class="proc-desc">Analyse de vos besoins, de votre marché et de vos objectifs. On pose les bonnes questions avant d'apporter des réponses.</p>
+          </div>
+          <div class="proc-step">
+            <div class="proc-num">02</div>
+            <div class="proc-title">Conception</div>
+            <p class="proc-desc">Wireframes, maquettes et prototypes. Vous validez à chaque étape avant que nous écrivions une ligne de code.</p>
+          </div>
+          <div class="proc-step">
+            <div class="proc-num">03</div>
+            <div class="proc-title">Développement</div>
+            <p class="proc-desc">Code propre, tests rigoureux, intégrations soignées. Transparence totale avec un accès en temps réel à l'avancement.</p>
+          </div>
+          <div class="proc-step">
+            <div class="proc-num">04</div>
+            <div class="proc-title">Lancement & Suivi</div>
+            <p class="proc-desc">Mise en ligne, formation et accompagnement. Nous restons à vos côtés après la livraison.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-strip">
+      <div class="container">
+        <h2>Un projet en tête ?</h2>
+        <p>Parlons-en — le devis est gratuit et sans engagement.</p>
+        <a href="#" class="btn-white" onclick="showPage('contact')">Obtenir un devis →</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-bottom">
+        <span>© 2026 Sitio Agency. Tous droits réservés.</span>
+        <span>Conçu avec ❤️ par Sitio</span>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     PAGE 3 — PORTFOLIO
+═══════════════════════════════════════════════════ -->
+<div id="page-portfolio" class="page">
+
+  <section id="portfolio">
+    <div class="page-hero">
+      <div class="container">
+        <div class="page-hero-inner">
+          <span class="tag">Nos réalisations</span>
+          <h1 class="section-title">Des projets dont<br>nous sommes fiers</h1>
+          <div class="divider"></div>
+          <p class="section-sub">Découvrez une sélection de projets réalisés pour nos clients — chacun avec ses défis uniques et ses résultats concrets.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" style="padding:3rem 0 5rem">
+      <div class="filter-bar" id="filterBar">
+        <button class="filter-btn active" onclick="filterProjects('all',this)">Tous</button>
+        <button class="filter-btn" onclick="filterProjects('web',this)">Sites Web</button>
+        <button class="filter-btn" onclick="filterProjects('ecom',this)">E-commerce</button>
+        <button class="filter-btn" onclick="filterProjects('app',this)">Applications</button>
+        <button class="filter-btn" onclick="filterProjects('design',this)">Design</button>
+      </div>
+
+      <div class="portfolio-grid" id="projGrid">
+        <div class="proj-card reveal" data-cat="web">
+          <div class="proj-thumb" style="background:linear-gradient(135deg,#0a1628,#0d2040)">
+            🏢
+            <div class="proj-thumb-overlay"></div>
+          </div>
+          <div class="proj-info">
+            <div class="proj-cat">Site Web</div>
+            <div class="proj-title">Vertex Consulting — Site Vitrine</div>
+            <p class="proj-desc">Refonte complète du site d'un cabinet de conseil avec animations avancées et optimisation SEO.</p>
+            <div class="proj-tags">
+              <span class="proj-tag">Next.js</span>
+              <span class="proj-tag">Framer Motion</span>
+              <span class="proj-tag">SEO</span>
+            </div>
+          </div>
+        </div>
+        <div class="proj-card reveal" data-cat="ecom">
+          <div class="proj-thumb" style="background:linear-gradient(135deg,#0d1f0d,#0d3518)">
+            🛍️
+            <div class="proj-thumb-overlay"></div>
+          </div>
+          <div class="proj-info">
+            <div class="proj-cat">E-commerce</div>
+            <div class="proj-title">BioVerde — Boutique Bio en ligne</div>
+            <p class="proj-desc">Boutique Shopify sur mesure avec abonnements, parcours d'achat optimisé et +40% de conversions.</p>
+            <div class="proj-tags">
+              <span class="proj-tag">Shopify</span>
+              <span class="proj-tag">Liquid</span>
+              <span class="proj-tag">Analytics</span>
+            </div>
+          </div>
+        </div>
+        <div class="proj-card reveal" data-cat="app">
+          <div class="proj-thumb" style="background:linear-gradient(135deg,#1a0d2e,#2d1a5c)">
+            📱
+            <div class="proj-thumb-overlay"></div>
+          </div>
+          <div class="proj-info">
+            <div class="proj-cat">Application</div>
+            <div class="proj-title">Planify — App de gestion de tâches</div>
+            <p class="proj-desc">Application web progressive avec synchronisation temps réel, dark mode et notifications push.</p>
+            <div class="proj-tags">
+              <span class="proj-tag">React</span>
+              <span class="proj-tag">Firebase</span>
+              <span class="proj-tag">PWA</span>
+            </div>
+          </div>
+        </div>
+        <div class="proj-card reveal" data-cat="design">
+          <div class="proj-thumb" style="background:linear-gradient(135deg,#1f0808,#3d1515)">
+            🎨
+            <div class="proj-thumb-overlay"></div>
+          </div>
+          <div class="proj-info">
+            <div class="proj-cat">Design System</div>
+            <div class="proj-title">Nomitek — Design System complet</div>
+            <p class="proj-desc">Création d'un design system de 80+ composants pour une startup SaaS en pleine croissance.</p>
+            <div class="proj-tags">
+              <span class="proj-tag">Figma</span>
+              <span class="proj-tag">Storybook</span>
+              <span class="proj-tag">Tokens</span>
+            </div>
+          </div>
+        </div>
+        <div class="proj-card reveal" data-cat="web">
+          <div class="proj-thumb" style="background:linear-gradient(135deg,#080e1f,#0f2040)">
+            🏨
+            <div class="proj-thumb-overlay"></div>
+          </div>
+          <div class="proj-info">
+            <div class="proj-cat">Site Web</div>
+            <div class="proj-title">Riad Lazuli — Hôtel de luxe</div>
+            <p class="proj-desc">Site pour un riad marrakchi avec réservation en ligne intégrée et galerie immersive.</p>
+            <div class="proj-tags">
+              <span class="proj-tag">WordPress</span>
+              <span class="proj-tag">GSAP</span>
+              <span class="proj-tag">Booking API</span>
+            </div>
+          </div>
+        </div>
+        <div class="proj-card reveal" data-cat="ecom">
+          <div class="proj-thumb" style="background:linear-gradient(135deg,#1a1208,#3d2e10)">
+            👗
+            <div class="proj-thumb-overlay"></div>
+          </div>
+          <div class="proj-info">
+            <div class="proj-cat">E-commerce</div>
+            <div class="proj-title">Maison Élisa — Mode Artisanale</div>
+            <p class="proj-desc">Boutique en ligne haut de gamme avec lookbooks interactifs et configurateur produit 3D.</p>
+            <div class="proj-tags">
+              <span class="proj-tag">Vue.js</span>
+              <span class="proj-tag">Three.js</span>
+              <span class="proj-tag">Stripe</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Témoignages -->
+    <div class="testimonials" style="background:var(--gray-900);padding:5rem 0;">
+      <div class="container">
+        <span class="tag">Témoignages</span>
+        <h2 class="section-title">Ce que disent nos clients</h2>
+        <div class="testi-grid">
+          <div class="testi-card reveal">
+            <div class="stars">★★★★★</div>
+            <p class="testi-quote">Sitio a transformé notre présence en ligne. Le résultat dépasse largement nos attentes, tant sur le plan du design que des performances techniques.</p>
+            <div class="testi-author">
+              <div class="testi-avatar">KM</div>
+              <div>
+                <div class="testi-name">Karim Mansouri</div>
+                <div class="testi-company">CEO — Vertex Consulting</div>
+              </div>
+            </div>
+          </div>
+          <div class="testi-card reveal">
+            <div class="stars">★★★★★</div>
+            <p class="testi-quote">Professionnels, réactifs et créatifs. Notre boutique en ligne a vu ses conversions augmenter de 40% en deux mois. Je recommande vivement.</p>
+            <div class="testi-author">
+              <div class="testi-avatar">SB</div>
+              <div>
+                <div class="testi-name">Sofia Benhaddou</div>
+                <div class="testi-company">Fondatrice — BioVerde</div>
+              </div>
+            </div>
+          </div>
+          <div class="testi-card reveal">
+            <div class="stars">★★★★★</div>
+            <p class="testi-quote">L'équipe Sitio a parfaitement compris notre vision. Le design system livré est d'une qualité exceptionnelle et notre équipe adore l'utiliser.</p>
+            <div class="testi-author">
+              <div class="testi-avatar">AR</div>
+              <div>
+                <div class="testi-name">Ayoub Rachidi</div>
+                <div class="testi-company">CTO — Nomitek</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-bottom">
+        <span>© 2026 Sitio Agency. Tous droits réservés.</span>
+        <span>Conçu avec ❤️ par Sitio</span>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     PAGE 4 — À PROPOS
+═══════════════════════════════════════════════════ -->
+<div id="page-about" class="page">
+
+  <section id="about">
+    <div class="page-hero">
+      <div class="container">
+        <div class="page-hero-inner">
+          <span class="tag">Notre histoire</span>
+          <h1 class="section-title">Passion du web,<br>obsession du détail</h1>
+          <div class="divider"></div>
+          <p class="section-sub">Fondée en 2018, Sitio est née d'une conviction simple : le web doit être beau, rapide et efficace. Nous réunissons des experts passionnés pour concrétiser vos ambitions digitales.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="about-intro reveal">
+        <div class="about-img-block">
+          <div class="about-img">🚀</div>
+          <div class="about-badge-card">
+            <div class="abc-num">8</div>
+            <div class="abc-label">ans d'expertise</div>
+          </div>
+        </div>
+        <div>
+          <span class="tag">Notre mission</span>
+          <h2 class="section-title" style="margin-bottom:1rem">Votre succès digital<br>est notre mission</h2>
+          <p style="color:var(--gray-400);line-height:1.75;margin-bottom:2rem">
+            Chez Sitio, nous croyons que chaque entreprise mérite une présence web à la hauteur de ses ambitions. 
+            C'est pourquoi nous traitons chaque projet comme le nôtre — avec rigueur, créativité et un engagement total envers l'excellence.
+          </p>
+          <p style="color:var(--gray-400);line-height:1.75;margin-bottom:2rem">
+            Notre équipe multidisciplinaire combine design, développement et stratégie pour vous offrir des solutions complètes qui performent dans la durée.
+          </p>
+          <div class="values-grid">
+            <div class="val-item">
+              <div class="val-icon">💡</div>
+              <div>
+                <div class="val-name">Innovation</div>
+                <p class="val-desc">Toujours à la pointe des dernières technologies et tendances.</p>
+              </div>
+            </div>
+            <div class="val-item">
+              <div class="val-icon">🎯</div>
+              <div>
+                <div class="val-name">Précision</div>
+                <p class="val-desc">Chaque détail compte. Nous livrons toujours au pixel près.</p>
+              </div>
+            </div>
+            <div class="val-item">
+              <div class="val-icon">🤝</div>
+              <div>
+                <div class="val-name">Partenariat</div>
+                <p class="val-desc">Nous sommes vos partenaires, pas de simples prestataires.</p>
+              </div>
+            </div>
+            <div class="val-item">
+              <div class="val-icon">⚡</div>
+              <div>
+                <div class="val-name">Réactivité</div>
+                <p class="val-desc">Délais tenus et communication transparente, toujours.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chiffres -->
+    <div class="counts-section">
+      <div class="container">
+        <div class="counts-grid">
+          <div class="count-item reveal">
+            <div class="count-num" data-target="120">0<span class="acc">+</span></div>
+            <div class="count-label">Projets réalisés</div>
+          </div>
+          <div class="count-item reveal">
+            <div class="count-num" data-target="98">0<span class="acc">%</span></div>
+            <div class="count-label">Taux de satisfaction</div>
+          </div>
+          <div class="count-item reveal">
+            <div class="count-num" data-target="15">0<span class="acc"></span></div>
+            <div class="count-label">Experts dans l'équipe</div>
+          </div>
+          <div class="count-item reveal">
+            <div class="count-num" data-target="8">0<span class="acc">ans</span></div>
+            <div class="count-label">D'expérience</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Team -->
+    <div class="team-section">
+      <div class="container">
+        <span class="tag">L'équipe</span>
+        <h2 class="section-title">Des experts passionnés</h2>
+        <div class="team-grid">
+          <div class="team-card reveal">
+            <div class="team-photo">👨‍💼</div>
+            <div class="team-info">
+              <div class="team-name">Youssef El Mansouri</div>
+              <div class="team-role">Co-fondateur & CEO</div>
+              <p class="team-bio">Stratège digital avec 12 ans d'expérience. Vision produit et relations clients.</p>
+            </div>
+          </div>
+          <div class="team-card reveal">
+            <div class="team-photo">👩‍🎨</div>
+            <div class="team-info">
+              <div class="team-name">Leila Benali</div>
+              <div class="team-role">Directrice Artistique</div>
+              <p class="team-bio">Designer UI/UX primée, passionnée par l'expérience utilisateur et l'accessibilité.</p>
+            </div>
+          </div>
+          <div class="team-card reveal">
+            <div class="team-photo">👨‍💻</div>
+            <div class="team-info">
+              <div class="team-name">Omar Tahiri</div>
+              <div class="team-role">Lead Développeur</div>
+              <p class="team-bio">Expert React et Node.js. Architecte de solutions scalables et performantes.</p>
+            </div>
+          </div>
+          <div class="team-card reveal">
+            <div class="team-photo">👩‍💻</div>
+            <div class="team-info">
+              <div class="team-name">Nadia Chraibi</div>
+              <div class="team-role">SEO & Growth Manager</div>
+              <p class="team-bio">Spécialiste SEO technique et stratégie de contenu, +80 clients accompagnés.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-bottom">
+        <span>© 2026 Sitio Agency. Tous droits réservés.</span>
+        <span>Conçu avec ❤️ par Sitio</span>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     PAGE 5 — CONTACT
+═══════════════════════════════════════════════════ -->
+<div id="page-contact" class="page">
+
+  <section id="contact">
+    <div class="page-hero">
+      <div class="container">
+        <div class="page-hero-inner">
+          <span class="tag">Parlons-en</span>
+          <h1 class="section-title">Prêt à lancer<br>votre projet ?</h1>
+          <div class="divider"></div>
+          <p class="section-sub">Remplissez le formulaire ou contactez-nous directement. Nous vous répondons sous 24h.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="contact-layout">
+        <div class="contact-info reveal">
+          <h2>Contactez<br>l'équipe Sitio</h2>
+          <p>Que ce soit pour un devis, une question ou simplement pour faire connaissance, nous sommes à votre écoute.</p>
+          <div class="contact-details">
+            <div class="cd-item">
+              <div class="cd-icon">📧</div>
+              <div>
+                <div class="cd-label">Email</div>
+                <div class="cd-value">contact@sitio.agency</div>
+              </div>
+            </div>
+            <div class="cd-item">
+              <div class="cd-icon">📞</div>
+              <div>
+                <div class="cd-label">Téléphone</div>
+                <div class="cd-value">+212 6 00 00 00 00</div>
+              </div>
+            </div>
+            <div class="cd-item">
+              <div class="cd-icon">📍</div>
+              <div>
+                <div class="cd-label">Adresse</div>
+                <div class="cd-value">Guéliz, Marrakech, Maroc</div>
+              </div>
+            </div>
+            <div class="cd-item">
+              <div class="cd-icon">🕐</div>
+              <div>
+                <div class="cd-label">Horaires</div>
+                <div class="cd-value">Lun–Ven, 9h–18h</div>
+              </div>
+            </div>
+          </div>
+          <div class="socials">
+            <div class="social-btn" title="LinkedIn">💼</div>
+            <div class="social-btn" title="Instagram">📸</div>
+            <div class="social-btn" title="Twitter">🐦</div>
+            <div class="social-btn" title="Behance">🎨</div>
+          </div>
+        </div>
+
+        <div class="contact-form reveal" id="contactFormWrapper">
+          <div class="form-title">Décrivez votre projet</div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Prénom *</label>
+              <input type="text" id="fname" placeholder="Votre prénom" />
+            </div>
+            <div class="form-group">
+              <label>Nom *</label>
+              <input type="text" id="lname" placeholder="Votre nom" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Email *</label>
+            <input type="email" id="email" placeholder="votre@email.com" />
+          </div>
+          <div class="form-group">
+            <label>Téléphone</label>
+            <input type="tel" id="phone" placeholder="+212 6 XX XX XX XX" />
+          </div>
+          <div class="form-group">
+            <label>Type de projet *</label>
+            <select id="projType">
+              <option value="">Sélectionnez un service</option>
+              <option>Site vitrine</option>
+              <option>E-commerce</option>
+              <option>Application Web</option>
+              <option>Design UI/UX</option>
+              <option>SEO & Performance</option>
+              <option>Autre</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Budget estimé</label>
+            <select id="budget">
+              <option value="">Fourchette budgétaire</option>
+              <option>Moins de 5 000 €</option>
+              <option>5 000 – 15 000 €</option>
+              <option>15 000 – 30 000 €</option>
+              <option>Plus de 30 000 €</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Décrivez votre projet *</label>
+            <textarea id="message" placeholder="Parlez-nous de votre projet, vos objectifs, vos contraintes..."></textarea>
+          </div>
+          <button class="btn btn-primary" style="width:100%;justify-content:center;padding:1rem" onclick="submitForm()">
+            Envoyer ma demande →
+          </button>
+          <div class="form-success" id="formSuccess">
+            <div class="form-success-icon">✅</div>
+            <h3>Message envoyé !</h3>
+            <p>Merci pour votre message. Nous vous répondons dans les 24 heures.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Map -->
+    <div class="map-section">
+      <div class="container">
+        <div class="map-placeholder">
+          🗺️
+          <p>Sitio Agency — Guéliz, Marrakech</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="faq-section">
+      <div class="container">
+        <span class="tag">FAQ</span>
+        <h2 class="section-title">Questions fréquentes</h2>
+        <div class="faq-list" id="faqList">
+          <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">
+              Combien coûte la création d'un site web ?
+              <span class="faq-arrow">▼</span>
+            </div>
+            <div class="faq-a">Le coût dépend de la complexité du projet. Un site vitrine démarre généralement à partir de 2 000 €, tandis qu'un e-commerce ou une application web peut aller de 8 000 € à plusieurs dizaines de milliers d'euros. Nous fournissons un devis gratuit et détaillé après un premier échange.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">
+              Combien de temps dure un projet ?
+              <span class="faq-arrow">▼</span>
+            </div>
+            <div class="faq-a">Un site vitrine prend généralement 3 à 6 semaines. Un projet e-commerce ou une application web peut nécessiter 2 à 4 mois selon la complexité. Nous définissons un planning précis lors du démarrage et nous nous engageons à le respecter.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">
+              Proposez-vous de la maintenance après la livraison ?
+              <span class="faq-arrow">▼</span>
+            </div>
+            <div class="faq-a">Oui, nous proposons des contrats de maintenance mensuelle qui incluent les mises à jour de sécurité, les sauvegardes, les corrections de bugs et un support prioritaire. Nous restons à vos côtés dans la durée.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">
+              Pouvez-vous reprendre un site existant ?
+              <span class="faq-arrow">▼</span>
+            </div>
+            <div class="faq-a">Absolument. Nous effectuons d'abord un audit complet de votre site actuel, puis nous définissons ensemble la meilleure stratégie : refonte totale, amélioration progressive, ou migration vers une nouvelle technologie.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">
+              Travaillez-vous avec des clients à distance ?
+              <span class="faq-arrow">▼</span>
+            </div>
+            <div class="faq-a">Oui, nous travaillons avec des clients du Maroc, de France, de Belgique, du Canada et d'ailleurs. Notre processus de travail est entièrement adapté au travail à distance avec des outils collaboratifs modernes.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-bottom">
+        <span>© 2026 Sitio Agency. Tous droits réservés.</span>
+        <span>Conçu avec ❤️ par Sitio</span>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
